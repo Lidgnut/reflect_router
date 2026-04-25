@@ -61,4 +61,6 @@ The project is optimized for **VS Code DevContainers**, to provide a pre-configu
 ## Execution
 Binaries are generated in the `build/` directory.
 
-[CODE_BLOCK: Execution command]
+```sh
+./build/reflect_router_app
+```
