@@ -1,0 +1,55 @@
+# --- Build-Verzeichnisse ---
+build/
+bin/
+lib/
+out/
+.ninja_deps
+.ninja_log
+compile_commands.json
+
+# --- CMake-Artefakte ---
+CMakeFiles/
+CMakeCache.txt
+CMakeScripts/
+cmake_install.cmake
+Makefile
+
+# --- C++ Binaries & Objekte ---
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+*.out
+*.app
+*.dSYM/
+*.o.d
+
+# --- VS Code (Persönliche Einstellungen) ---
+.vscode/*
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/extensions.json
+*.code-workspace
+.history/
+
+# --- Compiler & Tooling ---
+# Falls du GCC-Snapshots oder Clang-Builds lokal ablegst
+*.gch
+*.pch
+.cache/
+.clangd/
+.clang-format
+.gcc-snapshot/
+
+# --- System-Dateien ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Backup & Temp ---
+*.bak
+*.swp
+*~
+# Falls du Farrells Schafe zählst und eine Liste hast ;)
+*.tmp

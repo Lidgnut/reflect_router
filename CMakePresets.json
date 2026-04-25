@@ -1,0 +1,42 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "clang-p2996",
+      "displayName": "Clang 21 P2996 (Bloomberg)",
+      "description": "Nutzt den experimentellen Reflection-Compiler",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_CXX_COMPILER": "/opt/p2996/clang/bin/clang++",
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "gcc-trunk",
+      "displayName": "GCC Trunk Reflection (P2996)",
+      "description": "Konfiguration für GCC 16 Snapshot mit C++26 Reflection",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_CXX_COMPILER": "g++",
+        "CMAKE_C_COMPILER": "gcc",
+        "CMAKE_CXX_STANDARD": "26",
+        "CMAKE_CXX_STANDARD_REQUIRED": "ON",
+        "CMAKE_CXX_EXTENSIONS": "OFF",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_CXX_FLAGS": "-freflection -fconcepts"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "default",
+      "configurePreset": "clang-p2996"
+    },
+    {
+      "name": "gcc-trunk",
+      "configurePreset": "gcc-trunk"
+    }
+  ]
+}

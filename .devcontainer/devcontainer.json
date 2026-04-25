@@ -1,0 +1,26 @@
+{
+    "name": "C++26 Reflection Lab (T14)",
+    "build": {
+        "dockerfile": "gcc.Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cpptools-extension-pack",
+                "llvm-vs-code-extensions.vscode-clangd",
+                "twxs.cmake"
+            ],
+            "settings": {
+                "clangd.arguments": [
+                    "--header-insertion=never",
+                    "--query-driver=/usr/bin/clang++",
+                    "--completion-style=detailed",
+                    "-std=c++2c" 
+                ]
+            }
+        }
+    },
+    "runArgs": ["--security-opt", "label=disable"],
+    "containerUser": "vscode"
+}
